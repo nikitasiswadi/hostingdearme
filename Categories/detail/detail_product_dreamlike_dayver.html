@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <script src="../js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+    <title>DearMe | Day Ver</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="../../styling/style_merch.css">
+    <!--fav-icon-->
+    <link rel="shortcut icon" href="../../images/Logo/DearMe-Fav-Logo.png">
+    <!--using-fontAwesome-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style_album.css">
+    
+</head>
+
+<body>
+    <!--navigation-bar-->
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #252525;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html"><img src="../../images/Logo/DearMe-Logo-White.png" width="125px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">&nbsp &nbsp &nbsp HOME &nbsp &nbsp &nbsp</a>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            STAR &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../Star Profile/TheBoyzProfile.html">The Boyz</a></li>
+                            <li><a class="dropdown-item" href="../../Star Profile/BTSProfile.html">BTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../Categories/nav_album.html">Album</a></li>
+                            <li><a class="dropdown-item" href="../../Categories/official_merch.html">Official Merch</a></li>
+                            <li><a class="dropdown-item" href="../../Categories/k-style.html">K-Style</a></li>
+                            <li><a class="dropdown-item" href="../../Categories/unoff_merch.html">Fanmade Merch</a></li>
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../terms.html">TERMS &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        </a>
+                    </li>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
+                            </form>
+                            &nbsp &nbsp &nbsp
+                        </div>
+                    </nav>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-bell" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signInRegister">
+                            <i class="far fa-user" style="color: white;"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--modal-->
+    <div class="modal fade" id="signInRegister" tabindex="-1" aria-labelledby="signInRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInRegister">Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="Log In">
+                        <p>Email</p>
+                            <input type="text" class="input-field form-control" name="email" placeholder="example@gmail.com" required>
+                        <p>Password</p>
+                            <input type="password" class="input-field form-control"  name="password" required>
+                
+                        <input type="submit" name="submit" value="OK">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <p>Don't have an account yet?</p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3 container-fluid">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../../images/Album/Dreamlike-DayVer.jpg" class="img-fluid rounded-start" alt="Dreamlike-DayVer">
+            <br><br>
+            <!-- <div class="alert alert-secondary" role="alert">
+                
+            </div> -->
+            
+          </p>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">THE BOYZ - Dreamlike (DayVer)</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">$21.95</th>
+                        </tr>
+                      </thead>
+                </table>
+              </h5>
+              <p class="card-text">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                          <td scope="row">Release</td>
+                          <td>2019-08-20</td>
+                          <!-- <td scope="row">(Expected) Date of stock</td> -->
+                          <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">(Expected) Date of stock</td>
+                            <td>2021-09-27</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Mileage</td>
+                            <td>16</td>
+                            <!-- <td scope="row">(Expected) Date of stock</td> -->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Goods code</td>
+                            <td>GD00039295</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Sales</td>
+                            <td>1,247</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Rating</td>
+                            <td><i class="fas fa-star" style="color: goldenrod;"></i>
+                                <i class="fas fa-star" style="color: goldenrod;"></i>
+                                <i class="fas fa-star" style="color: goldenrod;"></i>
+                                <i class="fas fa-star" style="color: goldenrod;"></i>
+                                <i class="fas fa-star" style="color: goldenrod;"></i>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                                <p>The Boyz</p>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- <p>
+                    VERSIONS :
+                </p>
+                <li>DREAMLIKE</li>
+                <li>DAY</li>
+                <li>DIY</li>
+                <br>
+                <p>
+                    CONTENTS :
+                </p>
+                <li>BOOKLET - 3 versions / 1ea / 92p</li>
+                <li>CD-R - 3 versions / 1ea</li>
+                <li>PHOTOZINE - Random 1 out of 12 / 12p</li>
+                <li>PHOTOCARD - 3 versions<br>
+                    <ul>
+                        <li>Dreamlike Ver. Random 1 out of 11</li>
+                        <li>Day Ver. Random 1 out of 12</li>
+                        <li>DIY Ver. Random 1 out of 12</li>
+                    </ul>
+                </li>
+                <li>POSTCARD - 3 versions<br>
+                    <ul>
+                        <li>Dreamlike Ver. Random 1 out of 11</li>
+                        <li>Day Ver. Random 1 out of 11</li>
+                        <li>DIY Ver. Random 1 out of 11</li>
+                    </ul>
+                </li>
+                <li>STICKER PACK - Random 1 out of 3 sets</li>
+                <li>POLAROID - 1 polaroid packaged inside limited number of random first press album (First Press Only, No longer included</li> -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="alert container-fluid" role="alert">
+        <p>
+            VERSIONS :
+        </p>
+        <li>DREAMLIKE</li>
+        <li>DAY</li>
+        <li>DIY</li>
+        <br>
+        <p>
+            CONTENTS :
+        </p>
+        <li>BOOKLET - 3 versions / 1ea / 92p</li>
+        <li>CD-R - 3 versions / 1ea</li>
+        <li>PHOTOZINE - Random 1 out of 12 / 12p</li>
+        <li>PHOTOCARD - 3 versions<br>
+            <ul>
+                <li>Dreamlike Ver. Random 1 out of 11</li>
+                <li>Day Ver. Random 1 out of 12</li>
+                <li>DIY Ver. Random 1 out of 12</li>
+            </ul>
+        </li>
+        <li>POSTCARD - 3 versions<br>
+            <ul>
+                <li>Dreamlike Ver. Random 1 out of 11</li>
+                <li>Day Ver. Random 1 out of 11</li>
+                <li>DIY Ver. Random 1 out of 11</li>
+            </ul>
+        </li>
+        <li>STICKER PACK - Random 1 out of 3 sets</li>
+        <li>POLAROID - 1 polaroid packaged inside limited number of random first press album (First Press Only, No longer included</li>
+        <li>TRACK LIST</li>
+        <ol>
+            <li>Water</li>
+            <li>D.D.D</li>
+            <li>Complete Me</li>
+            <li>SUMMER TIME</li>
+            <li>위로 (Going High)</li>
+            <li>Daydream</li>
+        </ol>
+      </div>
+        
+
+      
+</body>

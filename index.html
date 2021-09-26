@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <script src="../js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+    <title>DearMe | Official Store</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="styling/style.css">
+    <!--fav-icon-->
+    <link rel="shortcut icon" href="images/Logo/DearMe-Fav-Logo.png">
+    <!--using-fontAwesome-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--navigation-bar-->
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #252525;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/Logo/DearMe-Logo-White.png" width="125px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">&nbsp &nbsp &nbsp HOME &nbsp &nbsp &nbsp</a>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            STAR &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="Star Profile/TheBoyzProfile.html">The Boyz</a></li>
+                            <li><a class="dropdown-item" href="Star Profile/BTSProfile.html">BTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="Categories/nav_album.html">Album</a></li>
+                            <li><a class="dropdown-item" href="Categories/official_merch.html">Official Merch</a></li>
+                            <li><a class="dropdown-item" href="Categories/k-style.html">K-Style</a></li>
+                            <li><a class="dropdown-item" href="Categories/unoff_merch.html">Fanmade Merch</a></li>
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">TERMS &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        </a>
+                    </li>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
+                            </form>
+                            &nbsp &nbsp &nbsp
+                        </div>
+                    </nav>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-bell" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signInRegister">
+                            <i class="far fa-user" style="color: white;"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!--modal-->
+    <div class="modal fade" id="signInRegister" tabindex="-1" aria-labelledby="signInRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInRegister">Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="Log In">
+                        <p>Email</p>
+                            <input type="text" class="input-field form-control" name="email" placeholder="example@gmail.com" required>
+                        <p>Password</p>
+                            <input type="password" class="input-field form-control"  name="password" required>
+                
+                        <input type="submit" name="submit" value="OK">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <p>Don't have an account yet?</p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--tambahan-->
+    <h2 style="text-align: center;">WHAT'S NEW ON DEAR<span style="color: #00acb1;">ME</span></h2>
+
+    <!--carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 25px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="images/Carousel/NewArrivalBTSButter.jpg" class="d-block w-100"
+                alt="New Arrival Bucket Hat Butter" title="New Arrival Bucket Hat BTS Butter!">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Carousel/ChartTalkTBZ.jpg" class="d-block w-100"
+                alt="Chart Show with The Boyz" title="Chart Show with The Boyz!">
+            </div>
+            <div class="carousel-item active">
+                <img src="images/Carousel/ThrillingVCEvent.jpg" class="d-block w-100"
+                alt="Thrill-ing Video Call Event" title="The Boyz Thrill-ing Video Call Event!">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Carousel/CozyTalkBTS.jpg" class="d-block w-100"
+                alt="Cozy Talk with BTS" title="Cozy Talk with BTS!">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Carousel/RestockedAlbum-Persona.jpg" class="d-block w-100"
+                alt="Restock Album BTS Persona" title="Restock! BTS Map of the Soul: Persona">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--featured-categories-->
+    <div class="alert alert-light" role="alert">
+    <h2>CATEGORIES</h2>
+    <div class="categories">
+        <div class="row">
+            <div class="col-3">
+                <img src="images/Album/SkoolLuvAffair-Special.jpg" width="250px">
+                <h3>Albums</h3>
+                <a href="Categories/nav_album.html" class="btn btn-outline-dark" style="margin-left: 50px;">Explore Now <i class="fas fa-arrow-right" style="color: aqua; margin-left: 5px;"></i></a>
+            </div>
+            <div class="col-3">
+                <img src="images/Official Merch/Lightstick Toa TBZ.jpg" width="250px">
+                <h3>Official Merch</h3>
+                <a href="Categories/official_merch.html" class="btn btn-outline-dark" style="margin-left: 55px;">Explore Now <i class="fas fa-arrow-right" style="color: aqua; margin-left: 5px;"></i></a>
+            </div>
+            <div class="col-3">
+                <img src="images/K-Style/2020 REAL MD 08 - TShirt.jpg" width="250px">
+                <h3>K-Style</h3>
+                <a href="Categories/k-style.html" class="btn btn-outline-dark" style="margin-left: 55px;">Explore Now <i class="fas fa-arrow-right" style="color: aqua; margin-left: 5px;"></i></a>
+            </div>
+            <div class="col-3">
+                <img src="images/unoff merch/keychain-tbz.jpg" width="250px">
+                <h3>Fanmade Merch</h3>
+                <a href="Categories/unoff_merch.html" class="btn btn-outline-dark" style="margin-left: 53px;">Explore Now <i class="fas fa-arrow-right" style="color: aqua; margin-left: 5px;"></i></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Category-->
+    <h2>NEW ARRIVAL</h2>
+
+    <!--card-for-new-arrival-->
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <img src="images/K-Style/butter shirt.png" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">Stripped S/S T-Shirt (Multi)<sup><span class="badge bg-success">New!</span></sup></h5>
+                    <p class="card-text">BTS</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <h5>IDR 594,844.28</h5>
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/Album/Dreamlike-DiyVer.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">THE BOYZ - Dreamlike (DiyVer)<sup><span class="badge bg-success">New!</span></sup></h5>
+                    <p class="card-text">THE BOYZ</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="far fa-star" style="color: goldenrod;"></i>
+                    <h5>IDR 312,255.78</h5>
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/unoff merch/stiker tbz.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">THE BOYZ Thrill Ride Sticker Set<sup><span class="badge bg-success">New!</span></sup></h5>
+                    <p class="card-text">Kulkit</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star-half-alt" style="color: goldenrod;"></i>
+                    <h5>IDR 35,000</h5>
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Category-->
+    <h2>BEST SELLER</h2>
+
+    <!--card-for-new-arrival-->
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <img src="images/Album/Dreamlike-DayVer.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">THE BOYZ - Dreamlike (DayVer)</h5>
+                    <p class="card-text">THE BOYZ</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="far fa-star" style="color: goldenrod;"></i>
+                    <h5>IDR 312,255.78</h5> 
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/Official Merch/mini photocard r1.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">BTS Mini Photocard</h5>
+                    <p class="card-text">BTS</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star-half-alt" style="color: goldenrod;"></i>
+                    <h5>IDR 312,255.78</h5>
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/Album/Thrilling-SplashVer.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">THRILL-ING - Splash Ver.</h5>
+                    <p class="card-text">THE BOYZ</p>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <i class="fas fa-star" style="color: goldenrod;"></i>
+                    <h5>IDR 310.000</h5>
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-shopping-bag" style="color: aqua; margin-right: 10px;"></i>Buy Now</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-cart-plus" style="color: aqua; margin-right: 10px;"></i>Add to cart</a>&nbsp
+                    <a href="#" class="btn btn-outline-dark"><i class="fas fa-heart" style="color: aqua; margin-right: 10px;"></i>Like</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <!-- <th scope="col">Download Our App</th> -->
+                <th scope="col"><img src="images/Logo/DearMe-Logo-White.png" width="180px"></th>
+                <th scope="col">Follow Us</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- <td>bla</td> -->
+                <!-- <td><a class="footer-link" href="#" style="text-decoration: none; color: white;">About Us</td> -->
+                <td><a class="footer-link" href="terms.html" style="text-decoration: none; color: white;">Terms &amp; Condition</a></td>
+                <td><a href="#"><i class="fab fa-facebook-f" style="color: white;"></i> dearmeofficial_fb</a></td>
+            </tr>
+
+            <tr>
+                <!-- <td>bla</td> -->
+                <!-- <td><a class="footer-link" href="#" style="text-decoration: none; color: white;">Terms &amp; Condition</a></td> -->
+                <td><a class="footer-link" href="Star Profile/TheBoyzProfile.html" style="text-decoration: none; color: white;">The Boyz</a></td>
+                <td><a href="#"><i class="fab fa-twitter" style="color: white;"></i> dearmeofficial_twt</a></td>
+            </tr>
+
+            <tr>
+                <!-- <td>bla</td> -->
+                <td><a class="footer-link" href="Star Profile/BTSProfile.html" style="text-decoration: none; color: white;">BTS</a></td>
+                <td><a href="#"><i class="fab fa-instagram" style="color: white;"></i></a> dearmeofficial_ig</td>
+            </tr>
+
+            <tr>
+                <!-- <td>bla</td> -->
+                <!-- <td><a class="footer-link" href="#" style="text-decoration: none; color: white;">Join Affiliate</a></td> -->
+                <td><a class="footer-link" href="#" style="text-decoration: none; color: white;"></a></td>
+                <td><a href="#"><i class="fab fa-youtube" style="color: white;"></i> dearmeofficial_yt</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="akhir" style="color: white; text-align: center;"><br><br><br>
+        &copy; 2021 DEAR<span style="color: aqua;">ME</span>
+        <br>
+        All Rights Reserved
+        <br>
+    </div>
+</footer>
+
+</html>
