@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <script src="../js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+    <title>DearMe | Official Store</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="styling/style.css">
+    <!--fav-icon-->
+    <link rel="shortcut icon" href="images/Logo/fav-d-icon.png">
+    <!--using-fontAwesome-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--navigation-bar-->
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #252525;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/Logo/DearMe-Logo-White.png" width="125px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">&nbsp &nbsp &nbsp HOME &nbsp &nbsp &nbsp</a>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            STAR &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="Star Profile/TheBoyzProfile.html">The Boyz</a></li>
+                            <li><a class="dropdown-item" href="Star Profile/BTSProfile.html">BTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP &nbsp &nbsp &nbsp</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="Categories/nav_album.html">Album</a></li>
+                            <li><a class="dropdown-item" href="Categories/official_merch.html">Official Merch</a></li>
+                            <li><a class="dropdown-item" href="Categories/k-style.html">K-Style</a></li>
+                            <li><a class="dropdown-item" href="Categories/unoff_merch.html">Fanmade Merch</a></li>
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        </a>
+                    </li>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
+                            </form>
+                            &nbsp &nbsp &nbsp
+                        </div>
+                    </nav>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-bell" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart" style="color: white;"></i>&nbsp &nbsp &nbsp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signInRegister">
+                            <i class="far fa-user" style="color: white;"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!--modal-->
+    <div class="modal fade" id="signInRegister" tabindex="-1" aria-labelledby="signInRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInRegister">Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="Log In">
+                        <p>Email</p>
+                            <input type="text" class="input-field form-control" name="email" placeholder="example@gmail.com" required>
+                        <p>Password</p>
+                            <input type="password" class="input-field form-control"  name="password" required>
+                
+                        <input type="submit" name="submit" value="OK">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>TERMS OF USE</h2>
+
+    <div class="termsIntro">
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            Welcome to the DearMe website, operated by DearMe Team, and located at dearme.com.
+            The following terms and conditions govern your use of the Site.</p>
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            By accessing, viewing, or using the content, material, or products available on or
+            through the Site, you certify that you have read, understand, and agree to be legally
+            bound by these Terms, as well as our Privacy Policy.</p>
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            You understand and agree that your use of the Site or any content, material, products
+            made available on or through the Site signifies that you fully accept and agree to
+            these Terms of Use.</p>
+    </div>
+
+    <div class="isiTerms">
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">R E G I S T R A T I O N</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            To access contents, material, or products on the Site, you are not required to register
+            and create an account. Thus, it is possible to do so in order to purchase products through
+            the Site and keeping certain information about yourself including your legal name, phone
+            number, address, and email address. You are responsible for ensuring that your account
+            login details are kept secret, safe, and secure at all times.
+        </p>
+
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            Should any of the information you provide on the Site change, please login to your account
+            and update such information directly on the Site. Any personal information that you provide
+            to us via the Site is subject to our Privacy Policy.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">P U R C H A S E S</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            Some products made available through the Site may be available for purchase. By purchasing
+            our product, you represent that you are fully agree to these Terms and the Privacy Policy,
+            and register or place an order on your behalf.
+        </p>
+
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            All sales are subject to our shipping and return policies, which shall be made available
+            to you on the Site or other delivered to you with your purchased goods. All items purchased
+            from DearMe Store are sent to you through our delivery partner. This means that the risk
+            of loss and title for such items pass to you upon our delivery to the carrier.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">D I S C L A I M E R S</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            DearMe reserves the right to change the assortment of items offered and to limit the
+            quantity of items that may be purchased from time to time at any time, without prior notice.
+            We also reserve the right to alter the rems or duration of any special offers or sale promotion.
+            DearMe is not liable in case of stock outage or unavailability of products. We have made
+            effort to display as accurately as possible the colors of our products that appear at the Site,
+            but we cannot guarantee that your computer or mobile display of any color will be accurate.
+        </p>
+
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            DearMe assumes no responsibility for accuracy, correctness, timeliness, or content of
+            the Materials provided on this Site. You should not assume that the Materials on this Site
+            are continuously updated or otherwise contain current information.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">R E T U R N - P O L I C Y</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            We receive returns and exchange with the conditions listed below.
+        </p>
+
+        <ol style="text-align: justify; margin-left: 300px; margin-right: 300px;">
+            <li style=" color: dimgray;">Items must be returned within 14 days from the date it is received.</li>
+            <li style=" color: dimgray;">Items must be in its original condition.</li>
+            <li style=" color: dimgray;">Items must include the receipt.</li>
+        </ol>
+
+        <p style="text-align: justify;  color: dimgray; margin-left: 300px; margin-right: 300px;">
+            For any returns and refund, our team will guide you through the process, thus you shall
+            contact our Customer Service.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">P R I V A C Y - P O L I C Y</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            Your information is safe with us. Our team understand that privacy concerns are extremely
+            important to our customers. You can rest assured that any information you submit to us will
+            not be misused, abused, or sold to any other parties. We only use your personal information
+            to complete your order.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">A P P L I C A B L E - L A W</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px;">
+            These Terms and Conditions are governed by the law force in Indonesia.
+        </p>
+
+        <h3 style="margin-top: 50px; margin-left: 300px; text-align: left;">Q U E S T I O N - A N D - F E E D B A C K</h3>
+        <p style="text-align: justify; color: dimgray; margin-left: 300px; margin-right: 300px; margin-top: 20px; margin-bottom: 100px;">
+            We welcome your questions, comments, and concerns about privacy or any of the information
+            collected from you or about you. Please send us any and all feedback regarding any issue.
+        </p>
+    </div>
+</body>  
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted" style="padding-left: 30px;"><span style="color: white;">&copy; 2021 DEAR</span><span style="color: aqua;">ME</span></p>
+  
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto">
+        <!--<svg class="bi me-2" width="40" height="32"><<use xlink:href="#bootstrap"/></svg>-->
+        <img src="images/Logo/DearMe-Logo-White.png" style="height: 30px;">
+    </a>
+  
+    <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#"><i class="fab fa-facebook-f" style="color: white; margin-right: 40px;"></i></a></li>
+        <li class="nav-item"><a href="#"><i class="fab fa-twitter" style="color: white; margin-right: 40px;"></i></a></li>
+        <li class="nav-item"><a href="#"><i class="fab fa-instagram" style="color: white; margin-right: 40px;"></i></a></li>
+        <li class="nav-item"><a href="#"><i class="fab fa-youtube" style="color: white; margin-right: 20px;"></i></a></li>
+  </footer>
+  
+  </html>
